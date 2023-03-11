@@ -34,18 +34,8 @@ public class PlantDAOImpl implements PlantDAO {
 //			NO em.close();
 	@Override
 	public Plant create(Plant plant) {
-//				em.find("plant", Plant.class);
-//			    // start the transaction
-			    em.getTransaction();
-//			    // write the customer to the database
 			    em.persist(plant);
-//			    // update the "local" Customer object
-			    em.flush();
-//			    // commit the changes (actually perform the operation)
-			    em.getTransaction();
-//
-//		
-		return null;
+		return plant;
 	}
 	@Override
 	public Plant update(Integer id, Plant plant) {

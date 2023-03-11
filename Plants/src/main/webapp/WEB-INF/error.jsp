@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Plant Info</title>
+<title>Error</title>
 <jsp:include page="bootstrapHead.jsp" />
 <link rel="stylesheet" href="css/stylesheet.css">
 
@@ -12,16 +12,13 @@
 <body>
 	<div class="topnav">
 		<a class="active" href="home.do">Home</a> <a href="create.do">Create</a>
-		<a href="addplant.do">Update</a> <a href="delete.do">Delete</a> <a
+		<a href="update.do">Update</a> <a href="delete.do">Delete</a> <a
 			href="show.do">About</a>
 	</div>
 	<div>
-		<h5>${plant.name}</h5>
-		<p>${plant.description}</p>
-		<p>${plant.price}</p>
-		
+		<h5>An error has occured</h5>
+		<p>No Plants Found</p>
 
 	</div>
-
 </body>
 </html>

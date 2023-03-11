@@ -8,18 +8,19 @@
 <meta charset="UTF-8">
 <title>Plant Parenthood</title>
 <jsp:include page="bootstrapHead.jsp" />
-  <link rel="stylesheet" href="css/stylesheet.css">
- 
+<link rel="stylesheet" href="css/stylesheet.css">
+
 
 </head>
 <body>
+	<div class="topnav">
+		<a class="active" href="home.do">Home</a> <a href="create.do">Create</a>
+		<a href="update.do">Update</a> <a href="delete.do">Delete</a> <a
+			href="">About</a>
+	</div>
+	<img src="images/JPALogo.jpeg" alt="Plant Parenthhood Logo"
+		height="100px" width="200px">
 
- <a class="active" href="#home">Home</a>
-  <a href="create.do">Create</a>
-  <a href="update.do">Update</a>
-<a href="delete.do">Delete</a>
-  <a href="show.do">About</a>
- 
 	<h1>Welcome to the Plant Store</h1>
 	<form action="getPlant.do" method="GET">
 		Plant ID: <input type="text" name="pid" /> <input type="submit"
@@ -34,10 +35,10 @@
 			<!--header  -->
 		</thead>
 		<tbody>
-			<c:forEach var="film" items="${plants}">
+			<c:forEach var="plant" items="${plants}">
 				<tr>
 					<td>${plant.id}</td>
-					<td><a href="getFilm.do?fid=${plant.id}">${plant.name}</a></td>
+					<td><a href="getPlant.do?pid=${plant.id}">${plant.name}</a></td>
 				<tr>
 			</c:forEach>
 		</tbody>

@@ -15,6 +15,11 @@ public class Plant {
 	private String description;
 	@Column(name="image_url")
 	private String imageUrl;
+	@Column(name="light")
+	private String lighting;
+	private String origin;
+	private double price;
+	
 	public Plant() {
 		super();
 	}
@@ -42,11 +47,30 @@ public class Plant {
 	public void setImageUrl(String imageUrl) {
 		this.imageUrl = imageUrl;
 	}
+	public String getLighting() {
+		return lighting;
+	}
+	public void setLighting(String lighting) {
+		this.lighting = lighting;
+	}
+	public String getOrigin() {
+		return origin;
+	}
+	public void setOrigin(String origin) {
+		this.origin = origin;
+	}
+	public double getPrice() {
+		return price;
+	}
+	public void setPrice(double price) {
+		this.price = price;
+	}
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
 		builder.append("Plant [id=").append(id).append(", name=").append(name).append(", description=")
-				.append(description).append(", imageUrl=").append(imageUrl).append("]");
+				.append(description).append(", imageUrl=").append(imageUrl).append(", lighting=").append(lighting)
+				.append(", origin=").append(origin).append(", price=").append(price).append("]");
 		return builder.toString();
 	}
 }
