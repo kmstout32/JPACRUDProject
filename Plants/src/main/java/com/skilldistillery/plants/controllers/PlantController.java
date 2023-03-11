@@ -35,7 +35,7 @@ public class PlantController {
 		return "home";
 		
 	}
-	
+//	ACTION OF CREATE BUTTON IN NAV
 	@RequestMapping(path= "create.do")
 	public String createPlantForm(Model mod, Plant plant) {
 		return "addplant";
@@ -48,6 +48,40 @@ public class PlantController {
 			mod.addAttribute(createdPlant);
 			return "show";
 		} else {
+			return "error";
+		}
+	}
+//	ACTION OF UPDATE BUTTON IN NAV
+	@RequestMapping(path= "update.do")
+	public String updatePlantForm(Model mod, Integer id) {
+		Plant plant = dao.findByID(id);
+		mod.addAttribute("plant", plant);
+		return "updateplant";
+	}
+	
+	@RequestMapping(path = "updateplant.do", method = RequestMethod.POST)
+	public String updatePlant(Model mod, Integer id, Plant plant) {
+		System.out.println(id);
+		Plant plantUpdated = dao.update(id, plant);
+			mod.addAttribute("plant", plantUpdated);
+			return "show";
+	
+	}
+
+	//	ACTION OF DELETE BUTTON IN NAV
+	@RequestMapping(path= "delete.do")
+	public String deletePlantForm(Model mod, Integer id) {
+		return "deleteplant";
+	}
+	
+	@RequestMapping(path = "deleteplant.do", method = RequestMethod.POST)
+	public String deletePlant(Model mod, Integer id) {
+		boolean plantDeleted = dao.destroy(id);
+		if (plantDeleted == true) {
+			return "successdelete";
+			
+		} else {
+			
 			return "error";
 		}
 	}

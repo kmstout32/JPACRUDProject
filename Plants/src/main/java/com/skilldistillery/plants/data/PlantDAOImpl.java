@@ -39,14 +39,29 @@ public class PlantDAOImpl implements PlantDAO {
 	}
 	@Override
 	public Plant update(Integer id, Plant plant) {
-		// TODO Auto-generated method stub
-		return null;
+		Plant updatePlant = em.find(Plant.class, id);
+		
+		if (plant != null) {
+			updatePlant.setName(plant.getName());
+			updatePlant.setDescription(plant.getDescription());
+			updatePlant.setLighting(plant.getLighting());
+			updatePlant.setImageUrl(plant.getImageUrl());
+			updatePlant.setOrigin(plant.getOrigin());
+			updatePlant.setPrice(plant.getPrice());
+			em.persist(updatePlant);
+		}
+		return updatePlant;
 	}
 
 	@Override
 	public boolean destroy(int plantId) {
-		// TODO Auto-generated method stub
-		return false;
+		boolean success = false;
+		Plant plant = em.find(Plant.class, plantId);
+		if(plant != null) {
+			em.remove(plant);
+			success = !em.contains(plant);
+		}
+		return success;
 	}
 
 }

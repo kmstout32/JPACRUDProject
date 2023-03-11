@@ -12,20 +12,20 @@
 
 
 </head>
-<body>
+<body class="text-center">
 	<div class="topnav">
 		<a class="active" href="home.do">Home</a> <a href="create.do">Create</a>
 		<a href="update.do">Update</a> <a href="delete.do">Delete</a> <a
 			href="">About</a>
-	</div>
-	<img src="images/JPALogo.jpeg" alt="Plant Parenthhood Logo"
-		height="100px" width="200px">
-
-	<h1>Welcome to the Plant Store</h1>
 	<form action="getPlant.do" method="GET">
 		Plant ID: <input type="text" name="pid" /> <input type="submit"
 			value="Show Plant" />
 	</form>
+	</div>
+	<img src="images/JPALogo.jpeg" alt="Plant Parenthhood Logo"
+		height="200px" width="400px">
+
+	<h1>Welcome to the Plant Store</h1>
 	<!-- show list of films link -->
 	<table class="table table-striped table-hover">
 		<thead>

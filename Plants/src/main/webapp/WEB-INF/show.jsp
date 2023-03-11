@@ -15,6 +15,7 @@
 		<a href="addplant.do">Update</a> <a href="delete.do">Delete</a> <a
 			href="show.do">About</a>
 	</div>
+	
 	<div>
 		<h5>${plant.name}</h5>
 		<p>${plant.description}</p>
@@ -22,6 +23,10 @@
 		
 
 	</div>
+	<form action="update.do" method="GET">
+		<input type="text" name="id" placeholder="Enter Plant ID"
+			value="${plant.id}"> <input type="submit" value="Update">
+	</form>
 
 </body>
 </html>
