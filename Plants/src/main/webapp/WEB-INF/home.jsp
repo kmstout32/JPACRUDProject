@@ -8,43 +8,39 @@
 <meta charset="UTF-8">
 <title>Plant Parenthood</title>
 <jsp:include page="bootstrapHead.jsp" />
+  <link rel="stylesheet" href="css/stylesheet.css">
+ 
 
-<link rel="stylesheet" href="webapp/css/stylesheet.css">
 </head>
 <body>
+
+ <a class="active" href="#home">Home</a>
+  <a href="create.do">Create</a>
+  <a href="update.do">Update</a>
+<a href="delete.do">Delete</a>
+  <a href="show.do">About</a>
+ 
 	<h1>Welcome to the Plant Store</h1>
 	<form action="getPlant.do" method="GET">
 		Plant ID: <input type="text" name="pid" /> <input type="submit"
 			value="Show Plant" />
 	</form>
-	<c:choose>
-		<c:when test="${empty plants }"> No Plants</c:when>
-		<c:otherwise>
-			<c:forEach var="plant" items="${plants}">
-				<!-- Display a table -->
-				<table class="table table-striped table-hover">
-					<thead>
-						<th>ID</th>
-						<!-- header -->
-						<th>Plant Name</th>
-						<!--header  -->
-					</thead>
-					<tbody>
-
-						<tr>
-							<td>${plant.id}</td>
-							<td><a href="getPlant.do?pid=${plant.id}">${plant.name}</a></td>
-						<tr>
-					</tbody>
-				</table>
+	<!-- show list of films link -->
+	<table class="table table-striped table-hover">
+		<thead>
+			<th>ID</th>
+			<!-- header -->
+			<th>Name</th>
+			<!--header  -->
+		</thead>
+		<tbody>
+			<c:forEach var="film" items="${plants}">
+				<tr>
+					<td>${plant.id}</td>
+					<td><a href="getFilm.do?fid=${plant.id}">${plant.name}</a></td>
+				<tr>
 			</c:forEach>
-
-		</c:otherwise>
-
-
-	</c:choose>
-
-
-	
+		</tbody>
+	</table>
 </body>
 </html>

@@ -3,6 +3,8 @@ package com.skilldistillery.plants.data;
 import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
@@ -32,7 +34,17 @@ public class PlantDAOImpl implements PlantDAO {
 //			NO em.close();
 	@Override
 	public Plant create(Plant plant) {
-		// TODO Auto-generated method stub
+//				em.find("plant", Plant.class);
+//			    // start the transaction
+			    em.getTransaction();
+//			    // write the customer to the database
+			    em.persist(plant);
+//			    // update the "local" Customer object
+			    em.flush();
+//			    // commit the changes (actually perform the operation)
+			    em.getTransaction();
+//
+//		
 		return null;
 	}
 	@Override

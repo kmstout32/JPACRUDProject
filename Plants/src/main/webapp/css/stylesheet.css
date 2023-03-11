@@ -1,8 +1,42 @@
 body {
-  background-color: lightblue;
+	background-color: lightblue;
 }
 
 h1 {
-  color: navy;
-  margin-left: 20px;
+	color: navy;
+	margin-left: 20px;
+}
+
+ th, td {
+  padding: 10px;
+  
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #0e211b;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+	
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
 }
