@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+	
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,23 +12,60 @@
 
 </head>
 <body>
-	<div class="topnav">
-		<a class="active" href="home.do">Home</a> <a href="create.do">Create</a>
-		<a href="addplant.do">Update</a> <a href="delete.do">Delete</a> <a
-			href="show.do">About</a>
-	</div>
-	
-	<div>
-		<h5>${plant.name}</h5>
-		<p>${plant.description}</p>
-		<p>${plant.price}</p>
-		
+	<jsp:include page="navbar.jsp"/>
 
-	</div>
+	<c:if test="${not empty plant}">
+		<table class="showplant">
+			<c:if test="${not empty plant}">
+				<tr>
+					<th>Name:</th>
+					<td>${plant.name}</td>
+				</tr>
+			</c:if>
+			<c:if test="${not empty plant.description}">
+				<tr>
+					<th>Description</th>
+					<td>${plant.description}</td>
+				</tr>
+			</c:if>
+			<c:if test="${not empty plant.price}">
+				<tr>
+					<th>Avg. Price</th>
+					<td>${plants.price}</td>
+				</tr>
+			</c:if>
+			<c:if test="${not empty plant.watering}">
+				<tr>
+					<th>Watering Requirements<th>
+					<td>${plant.watering}</td>
+				</tr>
+			</c:if>
+			<c:if test="${not empty plant.toxicity}">
+				<tr>
+					<th>Toxic to Pets</th>
+					<td>${plant.toxicity}</td>
+				</tr>
+			</c:if>
+			<c:if test="${not empty plant.origin}">
+				<tr>
+					<th>Origin</th>
+					<td>${plant.origin}</td>
+				</tr>
+			</c:if>
+			<c:if test="${not empty plant.lighting}">
+				<tr>
+					<th>Lighting Requirement</th>
+					<td>${plant.lighting}
+					</td>
+				</tr>
+			</c:if>
+		</table>
+	</c:if>
 	<form action="update.do" method="GET">
-		<input type="text" name="id" placeholder="Enter Plant ID"
+		<input type="hidden" name="id"
 			value="${plant.id}"> <input type="submit" value="Update">
 	</form>
+
 
 </body>
 </html>

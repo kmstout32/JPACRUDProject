@@ -10,11 +10,7 @@
 
 </head>
 <body>
-	<div class="topnav">
-		<a class="active" href="home.do">Home</a> <a href="create.do">Create</a>
-		<a href="update.do">Update</a> <a href="delete.do">Delete</a> <a
-			href="show.do">About</a>
-	</div>
+<jsp:include page="navbar.jsp"/>
 	<div>
 		<h5>An error has occured</h5>
 		<p>No Plants Found</p>

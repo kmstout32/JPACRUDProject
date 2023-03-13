@@ -3,8 +3,6 @@ package com.skilldistillery.plants.data;
 import java.util.List;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
@@ -45,9 +43,11 @@ public class PlantDAOImpl implements PlantDAO {
 			updatePlant.setName(plant.getName());
 			updatePlant.setDescription(plant.getDescription());
 			updatePlant.setLighting(plant.getLighting());
-			updatePlant.setImageUrl(plant.getImageUrl());
 			updatePlant.setOrigin(plant.getOrigin());
 			updatePlant.setPrice(plant.getPrice());
+			updatePlant.setOrigin(plant.getOrigin());
+			updatePlant.setToxicity(plant.getToxicity());
+			updatePlant.setWatering(plant.getWatering());
 			em.persist(updatePlant);
 		}
 		return updatePlant;

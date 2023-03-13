@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<jsp:include page="navbar.jsp"/>
 <h1>Deleted plant successfully!</h1>
 </body>
 </html>

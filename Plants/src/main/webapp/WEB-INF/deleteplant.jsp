@@ -9,13 +9,7 @@
 <link rel="stylesheet" href="css/stylesheet.css">
 </head>
 <body class="text-center">
-<div class="topnav">
-	<a class="active" href="home.do">Home</a>
-	<a href="create.do">Create</a>
-	<a href="update.do">Update</a>
-	<a href="delete.do">Delete</a>
-	<a href="">About</a>
-	</div>
+	<jsp:include page="navbar.jsp"/>
 	<h1>Enter the plant id you would like to delete:</h1>
 	<form action="deleteplant.do" method="POST">
 		Plant ID: <input type="text" name="id" /> <input type="submit"

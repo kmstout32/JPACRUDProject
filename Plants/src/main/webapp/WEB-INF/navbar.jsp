@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,11 +7,13 @@
 <title>Nav Bar</title>
 </head>
 <body>
-<a class="active" href="#home">Home</a>
-<a href="create.do">Create</a>
-  <a href="update.do">Update</a>
- <a href="delete.do">Delete</a>
- <a href="show.do">About</a>
-
+	<div class="topnav">
+		<a class="active" href="home.do">Home</a> <a href="create.do">Create</a>
+		<a href="delete.do">Delete</a> <a href="">About</a>
+		<form action="getPlant.do" method="GET">
+			Plant ID: <input type="text" name="pid" /> <input type="submit"
+				value="Show Plant" />
+		</form>
+	</div>
 </body>
 </html>

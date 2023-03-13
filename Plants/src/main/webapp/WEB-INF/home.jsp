@@ -9,23 +9,13 @@
 <title>Plant Parenthood</title>
 <jsp:include page="bootstrapHead.jsp" />
 <link rel="stylesheet" href="css/stylesheet.css">
-
-
 </head>
-<body class="text-center">
-	<div class="topnav">
-		<a class="active" href="home.do">Home</a> <a href="create.do">Create</a>
-		<a href="update.do">Update</a> <a href="delete.do">Delete</a> <a
-			href="">About</a>
-	<form action="getPlant.do" method="GET">
-		Plant ID: <input type="text" name="pid" /> <input type="submit"
-			value="Show Plant" />
-	</form>
-	</div>
+<body>
+<jsp:include page="navbar.jsp"/>
 	<img src="images/JPALogo.jpeg" alt="Plant Parenthhood Logo"
 		height="200px" width="400px">
 
-	<h1>Welcome to the Plant Store</h1>
+	<h1>Here for all your indoor plant needs!</h1>
 	<!-- show list of films link -->
 	<table class="table table-striped table-hover">
 		<thead>

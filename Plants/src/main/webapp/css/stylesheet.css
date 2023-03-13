@@ -1,10 +1,11 @@
 body {
-	background-color: lightgrey;
+	background-color: #c3d4c1;
 }
 
 h1 {
-	color: navy;
+	color: 3c722c;
 	margin-left: 20px;
+	font-style: fantasy;
 }
 
  th, td {
@@ -14,13 +15,18 @@ h1 {
 }
 
 th {
-  background-color: #0e211b;
+  background-color: #3c722c;
 }
 
+img {
+	  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 5px;
+}
 .topnav {
   overflow: hidden;
-  background-color: #333;
-}
+  background-color: #485c45;
+ }
 	
 .topnav a {
   float: left;
@@ -32,11 +38,11 @@ th {
 }
 
 .topnav a:hover {
-  background-color: #ddd;
+  background-color:#3c722c;
   color: black;
 }
 
 .topnav a.active {
-  background-color: #04AA6D;
+  background-color: #344f39;
   color: white;
 }

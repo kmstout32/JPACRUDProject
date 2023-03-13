@@ -14,6 +14,8 @@
 <link rel="stylesheet" href="css/stylesheet.css">
 </head>
 <body>
+<jsp:include page="navbar.jsp"/>
+
 	<div class="text-dark" role="success">
 		<p>Plant Edit Success</p>
 	</div>
