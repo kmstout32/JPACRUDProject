@@ -17,8 +17,6 @@
 		<input type="hidden" name="id" value="${plant.id}"> <b><label
 			for="name">Name:</label></b><br> <input id="name" name="name"
 			type="text" placeholder="${plant.name} " > <br>
-		<b><label for="imageUrl">Image URL:</label></b> <br> <input
-			id="imageUrl" name="imageUrl" type="text" > <br>
 		<b><label for="price">Avg. Price</label></b><br> <input
 			id="price" name="price" type="number" step="0.01" min="0.01"
 			placeholder="${plant.price}" required> <br> <label
