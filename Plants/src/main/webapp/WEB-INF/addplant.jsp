@@ -11,14 +11,12 @@
 <body class="text-center">
 	<jsp:include page="navbar.jsp" />
 
-	<h2>Enter the following information about the plant below</h2>
+	<h1>Enter the following information about the plant below</h1>
 	<form action="addplant.do" method="POST">
 
 		<b><label for="name">Name:</label></b> <br> <input id="name"
-			name="name" type="text" required> <br> <b><label
-			for="imageUrl">Image URL:</label></b> <br> <input id="imageUrl"
-			name="imageUrl" type="text" required> <br> <b><label
-			for="price">Avg. Price</label></b><br> <input id="price"
+			name="name" type="text" required> <br>  <br> <b><label
+			for="price">Avg. Price:</label></b><br> <input id="price"
 			name="price" type="number" step="0.01" min="0.01" required> <br>
 		<label for="description">Description:</label><br>
 		<textarea name="description" required>${plant.description}</textarea>
@@ -42,12 +40,12 @@
 			</select><br>
 		</div>
 		<div>
-			<p>Is the plant toxic to pets?</p>
+			<b></b><p>Is the plant toxic to pets?</p></b>
 			<input type="radio" id="toxicity" name="toxicity" value="Yes">
 			<label for="toxicity">Yes</label><br> <input type="radio"
 				id="toxicity" name="toxicity" value="No"> <label for="css">No</label><br>
 		</div>
-		<b><label for="origin">Country of Origin</label></b> <br> <input
+		<b><label for="origin">Country of Origin:</label></b> <br> <input
 			id="origin" name="origin" type="text" required> <br> <br>
 
 

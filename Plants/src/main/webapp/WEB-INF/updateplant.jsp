@@ -16,9 +16,9 @@
 	<form method="POST" action="updateplant.do">
 		<input type="hidden" name="id" value="${plant.id}"> <b><label
 			for="name">Name:</label></b><br> <input id="name" name="name"
-			type="text" placeholder="${plant.name} " required> <br>
+			type="text" placeholder="${plant.name} " > <br>
 		<b><label for="imageUrl">Image URL:</label></b> <br> <input
-			id="imageUrl" name="imageUrl" type="text" required> <br>
+			id="imageUrl" name="imageUrl" type="text" > <br>
 		<b><label for="price">Avg. Price</label></b><br> <input
 			id="price" name="price" type="number" step="0.01" min="0.01"
 			placeholder="${plant.price}" required> <br> <label
@@ -27,7 +27,7 @@
 		<br>
 		<div>
 			<b><label for="lighting">Lighting Required:</label></b> <select
-				id="lighting" name="lighting" required>
+				id="lighting" name="lighting" >
 				<option value="High">High</option>
 				<option value="Medium">Medium</option>
 				<option value="Low">Low</option>
@@ -35,7 +35,7 @@
 		</div>
 		<div>
 			<b><label for="watering">Watering Required:</label></b> <select
-				id="watering" name="watering" required>
+				id="watering" name="watering" >
 				<option value="High">High</option>
 				<option value="Med-High">Mid-High</option>
 				<option value="Medium">Medium</option>

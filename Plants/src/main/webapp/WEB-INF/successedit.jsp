@@ -17,7 +17,7 @@
 <jsp:include page="navbar.jsp"/>
 
 	<div class="text-dark" role="success">
-		<p>Plant Edit Success</p>
+		<h1>Plant success Edit!</h1>
 	</div>
 	<form action="home.do">
 		<input type="submit" value="Return Home">
